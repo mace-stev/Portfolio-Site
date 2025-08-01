@@ -12,7 +12,7 @@ export default function App() {
             <a href="#education">Education</a>
             <a href="#certifications">Certifications</a>
             <a href="#awards">Awards</a>
-            <a href="/resume.pdf" target="_blank" style={{ background: '#4fb2d6', color: '#000', padding: '4px 8px', borderRadius: '4px' }}>Resume</a>
+            <a href="/Portfolio-Site/resume.pdf" target="_blank" style={{ background: '#4fb2d6', color: '#000', padding: '4px 8px', borderRadius: '4px' }}>Resume</a>
           </div>
         </nav>
       </header>
@@ -31,12 +31,13 @@ export default function App() {
           <div className="project">
             <h3>Bizzybee</h3>
             <p>A Yelp clone using Flask/Python backend and React/Redux/TypeScript frontend. Built a PostgreSQL database and deployed via Docker to Render.</p>
-            <a href="https://bizzybee-ugmu.onrender.com/">Live Site</a> | <a href="https://github.com/lukeb06/bizzybee">GitHub</a>
+            <div className="project_atags"><a href="https://bizzybee-ugmu.onrender.com/">Live Site |</a><a href="https://github.com/lukeb06/bizzybee">| GitHub</a></div>
           </div>
           <div className="project">
             <h3>OneMusic</h3>
-            <p>App that allows users to transfer music playlists between platforms using YouTube and Spotify APIs. Built with React, Redux, TypeScript, Express, and Docker.</p>
-            <a href="https://onemusic-qmq9.onrender.com/">Live Site</a> | <a href="https://github.com/mace-stev/OneMusic">GitHub</a>
+            <p>App that allows users to transfer music playlists between platforms using YouTube and Spotify APIs. Built with React, Redux, TypeScript, Express, PostgreSQL, and Docker.</p>
+            <img className="readme_img" src="./OneMusic_repo.png"/>
+           <div className="project_atags"><a href="https://onemusic-qmq9.onrender.com/">Live Site |</a> <a href="https://github.com/mace-stev/OneMusic">| GitHub</a></div>
           </div>
         </section>
         <section id="education">
