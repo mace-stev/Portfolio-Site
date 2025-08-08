@@ -31,7 +31,8 @@ export default function App() {
           <div className="project">
             <h3>Bizzybee</h3>
             <p>A Yelp clone using Flask/Python backend and React/Redux/TypeScript frontend. Built a PostgreSQL database and deployed via Docker to Render.</p>
-            <div className="project_atags"><a href="https://bizzybee-ugmu.onrender.com/">Live Site |</a><a href="https://github.com/lukeb06/bizzybee">| GitHub</a></div>
+             <img className="readme_img" src="./bizzybee.png"/>
+            <div className="project_atags"><a href="https://bizzybee-24c7.onrender.com/">Live Site |</a><a href="https://github.com/mace-stev/bizzybee">| GitHub</a></div>
           </div>
           <div className="project">
             <h3>OneMusic</h3>
