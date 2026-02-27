@@ -146,7 +146,7 @@ export default function App() {
             </ul>
 
             <p style={{ marginTop: '10px' }}>
-              <a href="mailto:masonwp.help@gmail.com?subject=Website%20Audit%20Request">
+              <a href="about">
                 Email me to start
               </a>
             </p>
