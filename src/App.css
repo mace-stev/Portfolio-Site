@@ -51,11 +51,17 @@ h2 {
   color: #4fb2d6;
   font-weight: bold;
 }
-.readme_img{
-  width: 55rem;
-  height: 30rem;
-  margin: auto;
-  margin-bottom: 1rem;
+.readme_img {
+  width: 100%;
+  max-width: 900px;
+  height: 550px;
+  object-fit: contain;
+  object-position: top;
+  background: #111;
+  border-radius: 6px;
+  display: block;
+  margin: 12px auto;
+  border: 1px solid #2a2a2a;
 }
 .project_atags{
   display: flex

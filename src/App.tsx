@@ -55,16 +55,9 @@ export default function App() {
           </p>
 
           {/* CTA buttons */}
-          <div
-            style={{
-              marginTop: '10px',
-              display: 'flex',
-              gap: '10px',
-              flexWrap: 'wrap',
-            }}
-          >
+          <div style={{ marginTop: '10px', display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
             <a
-              href="mailto:masonwp.help@gmail.com?subject=Website%20Audit%20Request&body=Hi%20Mason%2C%0A%0AHere%20is%20my%20website%20URL%3A%20%0AWhat%20should%20I%20prioritize%3F%20%0A%0AThanks!"
+              href="mailto:masonwp.help@gmail.com?subject=Website%20Audit%20Request"
               style={{
                 background: '#4fb2d6',
                 color: '#000',
@@ -72,10 +65,41 @@ export default function App() {
                 borderRadius: '6px',
                 textDecoration: 'none',
                 fontWeight: 'bold',
+                display: 'inline-block',
               }}
             >
               Request $49 Audit
             </a>
+
+            <button
+              type="button"
+              onClick={async () => {
+                const email = 'masonwp.help@gmail.com';
+                try {
+                  await navigator.clipboard.writeText(email);
+                  alert('Copied: ' + email);
+                } catch {
+                  const input = document.createElement('input');
+                  input.value = email;
+                  document.body.appendChild(input);
+                  input.select();
+                  document.execCommand('copy');
+                  document.body.removeChild(input);
+                  alert('Copied: ' + email);
+                }
+              }}
+              style={{
+                border: '1px solid #4fb2d6',
+                background: 'transparent',
+                color: '#4fb2d6',
+                padding: '8px 12px',
+                borderRadius: '6px',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+              }}
+            >
+              Copy email
+            </button>
 
             <a
               href="#services"
@@ -86,11 +110,16 @@ export default function App() {
                 borderRadius: '6px',
                 textDecoration: 'none',
                 fontWeight: 'bold',
+                display: 'inline-block',
               }}
             >
               See Services
             </a>
           </div>
+
+          <p style={{ marginTop: '8px' }}>
+            Or email directly: <strong>masonwp.help@gmail.com</strong>
+          </p>
         </section>
 
         {/* SERVICES */}
@@ -216,22 +245,23 @@ export default function App() {
 
             <div className="project_atags" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <a
-                href="mailto:masonwp.help@gmail.com?subject=FlowPilot%20Setup%20Request&body=Hi%20Mason%2C%0A%0AI%27d%20like%20a%20FlowPilot%20WordPress%20setup.%0AWebsite%20(or%20domain)%3A%20%0ABusiness%20type%3A%20%0AAny%20pages%20needed%20(Home%2C%20About%2C%20Services%2C%20Contact)%3A%20%0A%0AThanks!"
+                href="#about"
                 style={{ textDecoration: 'none' }}
                 target="_blank"
                 rel="noreferrer"
               >
-                Request Setup
+                Request Setup |
               </a>
 
-              {/* Replace this link with your real FlowPilot repo/demo when ready */}
+
+              {/* Replace this link with your real FlowPilot demo when ready */}
               <a
                 href="https://flowpilotdemo.com/"
                 target="_blank"
                 rel="noreferrer"
                 style={{ textDecoration: 'none' }}
               >
-                View Theme Repo
+                | View Theme
               </a>
             </div>
           </div>
