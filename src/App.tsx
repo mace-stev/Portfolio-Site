@@ -51,10 +51,46 @@ export default function App() {
 
           <p>
             <strong>$49 Website Audit available.</strong> Email:{' '}
-            <a href="mailto:williamstevenson107@gmail.com">
-              williamstevenson107@gmail.com
-            </a>
+            <a href="mailto:masonwp.help@gmail.com">masonwp.help@gmail.com</a>
           </p>
+
+          {/* CTA buttons */}
+          <div
+            style={{
+              marginTop: '10px',
+              display: 'flex',
+              gap: '10px',
+              flexWrap: 'wrap',
+            }}
+          >
+            <a
+              href="mailto:masonwp.help@gmail.com?subject=Website%20Audit%20Request&body=Hi%20Mason%2C%0A%0AHere%20is%20my%20website%20URL%3A%20%0AWhat%20should%20I%20prioritize%3F%20%0A%0AThanks!"
+              style={{
+                background: '#4fb2d6',
+                color: '#000',
+                padding: '8px 12px',
+                borderRadius: '6px',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+              }}
+            >
+              Request $49 Audit
+            </a>
+
+            <a
+              href="#services"
+              style={{
+                border: '1px solid #4fb2d6',
+                color: '#4fb2d6',
+                padding: '8px 12px',
+                borderRadius: '6px',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+              }}
+            >
+              See Services
+            </a>
+          </div>
         </section>
 
         {/* SERVICES */}
@@ -70,6 +106,21 @@ export default function App() {
               <li>Performance and UX notes</li>
               <li>Delivered as a professional report within 48 hours</li>
             </ul>
+
+            <p style={{ marginTop: '10px' }}>
+              <strong>You’ll receive:</strong>
+            </p>
+            <ul>
+              <li>Prioritized issue list (High / Medium / Low)</li>
+              <li>Screenshots + steps to reproduce</li>
+              <li>Quick fixes + recommendations</li>
+            </ul>
+
+            <p style={{ marginTop: '10px' }}>
+              <a href="mailto:masonwp.help@gmail.com?subject=Website%20Audit%20Request">
+                Email me to start
+              </a>
+            </p>
           </div>
 
           <div className="project">
@@ -78,7 +129,7 @@ export default function App() {
               <li>End-to-end test coverage for key user flows</li>
               <li>Reliable locators and assertions</li>
               <li>HTML reports and failure screenshots</li>
-              <li>Optional CI setup</li>
+              <li>Optional CI setup (GitHub Actions)</li>
             </ul>
           </div>
 
@@ -90,6 +141,15 @@ export default function App() {
               <li>Performance-focused setup</li>
               <li>Quick turnaround</li>
             </ul>
+          </div>
+
+          <div className="project">
+            <h3>How it works</h3>
+            <ol>
+              <li>You send your website URL + what matters (sales, leads, bookings, etc.)</li>
+              <li>I test your site and document issues + fixes</li>
+              <li>You get a report you can use immediately (or I can help implement fixes)</li>
+            </ol>
           </div>
         </section>
 
@@ -120,15 +180,63 @@ export default function App() {
               visibility, form interaction, and user flows with reporting and
               failure detection.
             </p>
-            <img className="readme_img" src="./playwright.png" alt="Playwright QA demo" />
+            <p style={{ marginTop: '6px' }}>
+              <strong>Tools:</strong> Playwright + HTML reports + CI artifacts (screenshots/traces)
+            </p>
+
+            <img
+              className="readme_img"
+              src="./StackFile_Tests.png"
+              alt="Playwright report showing passing tests"
+            />
             <div className="project_atags">
-              <a href="https://github.com/mace-stev" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/mace-stev/StackFile"
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub
               </a>
             </div>
           </div>
 
-          {/* Projects - screenshots + code only */}
+          {/* FLOWPILOT */}
+          <div className="project">
+            <h3>FlowPilot – WordPress SaaS Theme</h3>
+            <p>
+              A modern, mobile-first SaaS landing page theme for WordPress.
+              Designed for fast setup, clear CTA sections, and clean “product-style” layouts.
+            </p>
+
+            <img
+              className="readme_img"
+              src="./flowpilot.png"
+              alt="FlowPilot WordPress SaaS theme preview"
+            />
+
+            <div className="project_atags" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <a
+                href="mailto:masonwp.help@gmail.com?subject=FlowPilot%20Setup%20Request&body=Hi%20Mason%2C%0A%0AI%27d%20like%20a%20FlowPilot%20WordPress%20setup.%0AWebsite%20(or%20domain)%3A%20%0ABusiness%20type%3A%20%0AAny%20pages%20needed%20(Home%2C%20About%2C%20Services%2C%20Contact)%3A%20%0A%0AThanks!"
+                style={{ textDecoration: 'none' }}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Request Setup
+              </a>
+
+              {/* Replace this link with your real FlowPilot repo/demo when ready */}
+              <a
+                href="https://flowpilotdemo.com/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                View Theme Repo
+              </a>
+            </div>
+          </div>
+
+          {/* OTHER PROJECTS */}
           <div className="project">
             <h3>Bizzybee</h3>
             <p>
@@ -165,9 +273,17 @@ export default function App() {
               </a>
             </div>
           </div>
+
+          {/* FAQ */}
+          <div className="project">
+            <h3>FAQ</h3>
+            <p><strong>Do you need admin access?</strong> Not for the $49 audit. I can audit publicly accessible pages from a URL.</p>
+            <p><strong>What types of sites do you test?</strong> Small business websites, landing pages, web apps, and WordPress sites.</p>
+            <p><strong>Can you fix issues too?</strong> Yes. If you want implementation help, I can quote based on scope.</p>
+            <p><strong>How fast is delivery?</strong> Typically within 48 hours for the audit.</p>
+          </div>
         </section>
 
-        {/* Keep the rest as-is */}
         <section id="education">
           <h2>Education</h2>
           <ul>
@@ -211,9 +327,7 @@ export default function App() {
           LinkedIn
         </a>{' '}
         |{' '}
-        <a href="mailto:williamstevenson107@gmail.com">
-          williamstevenson107@gmail.com
-        </a>
+        <a href="mailto:masonwp.help@gmail.com">masonwp.help@gmail.com</a>
       </footer>
     </div>
   )
