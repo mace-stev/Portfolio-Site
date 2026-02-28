@@ -120,6 +120,103 @@ export default function App() {
           <p style={{ marginTop: '8px' }}>
             Or email directly: <strong>masonwp.help@gmail.com</strong>
           </p>
+          {/* Quick request (no email client needed) */}
+<div style={{ marginTop: '16px', maxWidth: '520px' }}>
+  <h3 style={{ marginBottom: '8px' }}>Quick request</h3>
+
+  <label style={{ display: 'block', marginBottom: '6px' }}>
+    Website URL
+    <input
+      id="siteUrl"
+      type="text"
+      placeholder="https://yourwebsite.com"
+      style={{
+        width: '100%',
+        marginTop: '6px',
+        padding: '10px',
+        borderRadius: '6px',
+        border: '1px solid #333',
+        background: '#111',
+        color: '#fff',
+      }}
+    />
+  </label>
+
+  <label style={{ display: 'block', marginBottom: '10px' }}>
+    What should I prioritize?
+    <textarea
+      id="notes"
+      placeholder="Bookings, leads, speed, broken buttons, mobile issues, etc."
+      rows={4}
+      style={{
+        width: '100%',
+        marginTop: '6px',
+        padding: '10px',
+        borderRadius: '6px',
+        border: '1px solid #333',
+        background: '#111',
+        color: '#fff',
+      }}
+    />
+  </label>
+
+  <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+    <button
+      type="button"
+      onClick={async () => {
+        const url = (document.getElementById('siteUrl') as HTMLInputElement).value.trim();
+        const notes = (document.getElementById('notes') as HTMLTextAreaElement).value.trim();
+
+        const email = 'masonwp.help@gmail.com';
+        const subject = 'Website Audit Request';
+        const body =
+          `Hi Mason,\n\n` +
+          `Website URL: ${url || '[paste url here]'}\n` +
+          `Priority: ${notes || '[tell me what matters most]'}\n\n` +
+          `Thanks!`;
+
+        const textToCopy = `To: ${email}\nSubject: ${subject}\n\n${body}`;
+
+        try {
+          await navigator.clipboard.writeText(textToCopy);
+          alert('Copied request message. Paste it into Gmail/Outlook and send.');
+        } catch {
+          alert('Copy failed. Please manually email masonwp.help@gmail.com');
+        }
+      }}
+      style={{
+        background: '#4fb2d6',
+        color: '#000',
+        padding: '10px 12px',
+        borderRadius: '6px',
+        fontWeight: 'bold',
+        cursor: 'pointer',
+        border: 'none',
+      }}
+    >
+      Copy request message
+    </button>
+
+    <a
+      href="mailto:masonwp.help@gmail.com?subject=Website%20Audit%20Request"
+      style={{
+        border: '1px solid #4fb2d6',
+        color: '#4fb2d6',
+        padding: '10px 12px',
+        borderRadius: '6px',
+        textDecoration: 'none',
+        fontWeight: 'bold',
+        display: 'inline-block',
+      }}
+    >
+      Open email (if available)
+    </a>
+  </div>
+
+  <p style={{ marginTop: '8px', opacity: 0.8 }}>
+    If the email button doesn’t open, click “Copy request message” and paste into Gmail.
+  </p>
+</div>
         </section>
 
         {/* SERVICES */}
