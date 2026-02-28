@@ -9,5 +9,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("audit-form");
+  if (form) {
+    form.addEventListener("submit", function () {
+      if (typeof gtag === "function") {
+        gtag('event', 'conversion', {
+          'send_to': 'G-82GD3VD2XL'
+        });
+      }
+    });
+  }
+});
+</script>
   </body>
 </html>
