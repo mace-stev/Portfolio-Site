@@ -50,7 +50,7 @@ export default function App() {
           </p>
 
           <p>
-            <strong>$49 Website Audit available.</strong> Email:{' '}
+            <strong>$49 Website Audit — Delivered within 48 hours.</strong> Email:{' '}
             <a href="mailto:masonwp.help@gmail.com">masonwp.help@gmail.com</a>
           </p>
 
@@ -243,7 +243,7 @@ export default function App() {
             </ul>
 
             <p style={{ marginTop: '10px' }}>
-              <a href="about">
+              <a href="#about">
                 Email me to start
               </a>
             </p>
@@ -344,8 +344,7 @@ export default function App() {
               <a
                 href="#about"
                 style={{ textDecoration: 'none' }}
-                target="_blank"
-                rel="noreferrer"
+                
               >
                 Request Setup |
               </a>
