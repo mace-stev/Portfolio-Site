@@ -122,7 +122,7 @@ export default function App() {
           </p>
           {/* Quick request (no email client needed) */}
           {/* Quick request form (Formspree) */}
-          <div style={{ marginTop: '16px', maxWidth: '520px' }}>
+          <div style={{ marginTop: '16px', maxWidth: '100%' }}>
             <h3 style={{ marginBottom: '8px' }}>Quick request</h3>
 
             <form
@@ -147,6 +147,7 @@ export default function App() {
                     border: '1px solid #333',
                     background: '#111',
                     color: '#fff',
+                    boxSizing: 'border-box',
                   }}
                 />
               </label>
@@ -157,7 +158,7 @@ export default function App() {
                   type="text"
                   name="website"
                   placeholder="https://yourwebsite.com"
-                  style={{
+                   style={{
                     width: '100%',
                     marginTop: '6px',
                     padding: '10px',
@@ -165,6 +166,7 @@ export default function App() {
                     border: '1px solid #333',
                     background: '#111',
                     color: '#fff',
+                    boxSizing: 'border-box',
                   }}
                 />
               </label>
@@ -183,6 +185,7 @@ export default function App() {
                     border: '1px solid #333',
                     background: '#111',
                     color: '#fff',
+                    boxSizing: 'border-box',
                   }}
                 />
               </label>

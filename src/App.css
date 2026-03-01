@@ -3,7 +3,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1a1a1a;
   color: #f0f0f0;
+  line-height: 1.5;
 }
+
 
 a {
   color: #4fb2d6;
@@ -23,17 +25,28 @@ header {
   z-index: 10;
 }
 
+/* NAV */
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 12px;
   max-width: 1000px;
   margin: auto;
   padding: 0 20px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+nav .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
 }
 
 nav .links a {
-  margin: 0 10px;
+  margin: 0; /* use gap instead */
+  padding: 6px 8px; /* bigger tap targets */
+  border-radius: 6px;
 }
 
 section {
@@ -51,10 +64,16 @@ h2 {
   color: #4fb2d6;
   font-weight: bold;
 }
+
+/* IMAGES / SCREENSHOTS */
 .readme_img {
   width: 100%;
   max-width: 900px;
-  height: 550px;
+
+  /* key mobile fix: don't force fixed height */
+  height: auto;
+  max-height: 550px;
+
   object-fit: contain;
   object-position: top;
   background: #111;
@@ -63,9 +82,8 @@ h2 {
   margin: 12px auto;
   border: 1px solid #2a2a2a;
 }
-.project_atags{
-  display: flex
-}
+
+/* PROJECTS */
 .project {
   background-color: #2a2a2a;
   padding: 20px;
@@ -74,12 +92,21 @@ h2 {
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .project:hover {
   transform: translateY(-5px);
 }
 
+.project_atags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* FOOTER */
 footer {
   background-color: #222;
   text-align: center;
@@ -91,10 +118,71 @@ footer a {
   margin: 0 10px;
 }
 
+/* PROFILE PIC */
 .profile-pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   display: block;
   margin: 20px auto;
+  object-fit: cover;
+}
+
+/* =========================
+   MOBILE BREAKPOINTS
+   ========================= */
+
+/* Tablets + small laptops */
+@media (max-width: 980px) {
+  section {
+    padding: 32px 16px;
+  }
+  h1{
+  margin: auto;
+}
+
+  nav {
+    padding: 0 16px;
+    justify-content: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .links {
+    width: 100%;
+
+    flex-wrap: wrap-reverse;
+  }
+
+  nav .links a {
+    padding: 10px 10px; /* easier to tap */
+  }
+
+  section {
+    padding: 28px 14px;
+  }
+
+  .project {
+    padding: 16px;
+  }
+
+  .readme_img {
+    max-height: 320px; /* keep images from dominating the screen */
+  }
+
+  .profile-pic {
+    width: 110px;
+    height: 110px;
+  }
+
+  footer a {
+    display: inline-block;
+    margin: 6px 10px;
+  }
 }
